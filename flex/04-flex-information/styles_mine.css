@@ -13,7 +13,8 @@ img {
 }
 
 /* do not edit this footer */
-.footer {
+.footer,
+.ynot {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -27,22 +28,23 @@ img {
 /*!!!I have gone back on my erring ways; 
 solution now starts here!!!*/
 .title {
+  display: flex;
+  justify-content: center;
   margin-bottom: 32px;
 }
 
 .content {
   display: flex;
-  justify-content: center;
-  gap: 52px;
+  justify-content: space-evenly;
 }
 
 .flower {
-  max-width:200px;
+  width: 200px;
+  display:flex;
+  justify-content: center;
+  padding: 0px 52px;
+  flex-wrap: wrap;
 }
-body {
+.text {
   text-align:center;
 }
-
-/*lessons learned: text align is inherited,
-many tools can be used to achieve a visually similar effect
-but redundancy can be cut out by using tools effectively*/
