@@ -69,12 +69,14 @@ button.cancel {
 
 .modal {
   display: flex;
+  justify-content: space-evenly;
   padding: 16px;
   gap: 16px;
 }
 
 /*the content has been divided into 2 boxes for the ! icon
-and the rest of the modal. gap is used to create an adequate display*/
+and the rest of the modal. space-evenly is used along with
+gap to create an adequate display*/
 
 .icon {
   flex: 1 0 auto;
@@ -83,19 +85,23 @@ and the rest of the modal. gap is used to create an adequate display*/
 /*flex is used by fixing shrink and automating basis so
 the icon isnt squashed*/
 
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+/*direction is set to column with the center property
+and a gap to align the content*/
+
+.left .top {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header {
   font-size: 18px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
 }
 
-.text {
-  margin-bottom: 16px;
-}
-
-/*two approaches were reviewed, 1. sorting the "left" container with column direction and spacing it evenly
-2. creating a bottom margin among the items within the left container. Overall for this application option 2 appears to be 
-more compact and easier to read.*/
