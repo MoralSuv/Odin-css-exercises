@@ -26,3 +26,65 @@ body {
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
 }
+
+/*solution HERE*/
+
+body {
+  display:flex;
+  flex-direction: column;
+}
+/*set the overall box layout to column,
+leaving the flex without justification allows items to 
+take up all the space*/
+.header {
+  font-size: 32px;
+  font-weight: 900;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+/*set the header to the appropriate size and center vertically*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*center the footer*/
+.content {
+  display: flex;
+  flex: 1;
+}
+/*set flex to 1 allows the page content/body to
+take up all the space*/
+.sidebar {
+  flex-shrink: 0;
+  padding: 16px;
+}
+/*set flex shrink to 0 ensures the sidebar remains
+300px*/
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0;
+}
+/*remove bullets and default indentations of 
+ul*/
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+/*remove hyperlink look from each anchor*/
+.panels {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+}
+/*wrap the panel area and added padding*/
+.card {
+  padding: 16px;
+  margin: 16px;
+  width: 250px;
+}
+/*give cards preset dimensions so that they fit 
+properly in the screen*/ 
